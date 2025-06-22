@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOTS - סיכום צ'אט WhatsApp</title>
+    <title>יוצרים עם בינה מלאכותית ודיאלוג</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,33 +12,67 @@
 <body>
     <div class="container">
         <header>
-            <img src="logo.svg" alt="לוגו מפלצת חמודה" class="logo">
-            <h1>מסכם השיחות של YOTS</h1>
-            <p>העלו קובץ צ'אט של WhatsApp (שיוצא כ-`.txt`) וקבלו סיכום מיידי.</p>
+            <div class="logo-title">
+                <img src="logo.svg" alt="לוגו קהילה" class="logo">
+                <h1>יוצרים עם בינה מלאכותית ודיאלוג</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">עמוד הבית</a>
+                <a href="tools.html">מאגר כלים</a>
+                <a href="guides.html">מדריכים וטיפים</a>
+                <a href="discussions.html">דיונים</a>
+            </nav>
         </header>
         
         <main>
-            <div class="upload-area">
-                <input type="file" id="chatFile" accept=".txt" hidden/>
-                <label for="chatFile" class="upload-label">
-                    <span>לחצו לבחירת קובץ</span>
-                </label>
-                <p id="fileName"></p>
+            <section class="hero">
+                <h2>ברוכים הבאים לקהילה!</h2>
+                <p>מרחב לשיתוף ידע, התנסות בכלים, דיון בסוגיות אתיות ופדגוגיות, והשראה הדדית סביב עולם הבינה המלאכותית.</p>
+            </section>
+
+            <div class="grid-container">
+                <section class="card">
+                    <h3>החדשות האחרונות</h3>
+                    <ul>
+                        <li>ההשקה של Claude 3.5 Sonnet</li>
+                        <li>חידושים מפתיעים ב-Canva</li>
+                        <li>פתיחת Veo, מחולל הוידאו של גוגל, למשתמשים</li>
+                        <li>עדכוני משרד החינוך בנושא AI</li>
+                    </ul>
+                </section>
+                
+                <section class="card">
+                    <h3>תוצר נבחר מהקהילה</h3>
+                    <p>הפעם אנו מציגים את המשחק המדהים של שרון טל! יצירה אינטראקטיבית שמדגימה שימוש יצירתי ב-AI.</p>
+                    <a href="#" class="cta-link">צפו במשחק</a>
+                </section>
             </div>
-            <button id="summarizeBtn">סכם את השיחה</button>
-            
-            <div id="resultsArea" class="results-area" style="display: none;">
-                <h2>תוצאות הסיכום:</h2>
-                <div id="loader" class="loader" style="display: none;"></div>
-                <div id="summaryContent"></div>
-            </div>
+
+            <section class="quick-links">
+                <h3>קישורים מהירים</h3>
+                <div class="links-wrapper">
+                    <a href="tools.html" class="quick-link-card">
+                        <img src="https://img.icons8.com/fluency/96/ai.png" alt="כלי AI"/>
+                        <h4>מאגר כלי AI</h4>
+                        <p>כל הכלים שהוזכרו בקבוצה, מחולקים לקטגוריות.</p>
+                    </a>
+                    <a href="guides.html" class="quick-link-card">
+                        <img src="https://img.icons8.com/fluency/96/manual.png" alt="מדריכים"/>
+                        <h4>מדריכים וטיפים</h4>
+                        <p>הדרכות, טיפים ופרומפטים שימושיים מהקהילה.</p>
+                    </a>
+                    <a href="discussions.html" class="quick-link-card">
+                        <img src="https://img.icons8.com/fluency/96/group-task.png" alt="דיונים"/>
+                        <h4>שיח ודיאלוג</h4>
+                        <p>ריכוז הדיונים הערכיים והפילוסופיים שלנו.</p>
+                    </a>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <p>נוצר באהבה עבור קהילת מובילי תקשוב</p>
+            <p>נוצר באהבה עבור קהילת 'יוצרים עם בינה מלאכותית ודיאלוג'</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html> 
