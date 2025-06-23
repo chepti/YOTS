@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductionFilter from '../../components/ProductionFilter.astro';
+import { productions } from '../../data/productions';
+import type { Production } from '../../data/productions';
+
+export async function getStaticPaths({ paginate }) {
+  const allProductions = productions.sort((a, b) => a.title.localeCompare(b.title));
+  return paginate(allProductions, { pageSize: 12 });
+}
+
+const { page } = Astro.props;
+const pageTitle = `גלריית תוצרים (עמוד ${page.currentPage}) | קהילת יוצרים.ות עם AI`;
+---
+
+<BaseLayout title={pageTitle}>
+    <main>
+        <h2>גלריית תוצרים מהקהילה</h2>
+        <p class="page-description">כאן תוכלו למצוא מבחר תוצרים ויצירות של חברי הקהילה. בואו לקבל השראה!</p>
+            
+        <ProductionFilter />
+
+        <div class="productions-gallery" id="productions-gallery">
+            {page.data.map((p: Production) => (
+                <div class="production-item" data-tool={p.tool} style="display: flex;">
+                    <h4>{p.title}</h4>
+                    <p class="creator">יצר/ה: {p.creator}</p>
+                    <p>{p.description}</p>
+                    <a href={p.link} target="_blank" class="cta-link">צפו בתוצר</a>
+                </div>
+            ))}
+        </div>
+
+        <div class="pagination-nav">
+            {page.url.prev && <a href={page.url.prev} class="cta-button secondary-link">&laquo; עמוד קודם</a>}
+            <span>עמוד {page.currentPage} מתוך {page.lastPage}</span>
+            {page.url.next && <a href={page.url.next} class="cta-button secondary-link">עמוד הבא &raquo;</a>}
+        </div>
+    </main>
+</BaseLayout>
+
+<style>
+    .pagination-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+        font-family: var(--font-family);
+    }
+</style> 

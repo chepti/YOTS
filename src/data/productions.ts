@@ -1,0 +1,171 @@
+export interface Production {
+  title: string;
+  creator: string;
+  description: string;
+  link: string;
+  tool: 'websim' | 'claude' | 'canva' | 'pika' | 'other';
+}
+
+export const productions: Production[] = [
+    {
+        title: "חדר בריחה: Present Simple",
+        creator: "חברה אנונימית",
+        description: "חדר בריחה אינטראקטיבי ללימוד ותרגול הזמן הדקדוקי Present Simple באנגלית.",
+        link: "https://websim.ai/c/HXmw0kVtdbyeQAdGQ",
+        tool: "websim",
+    },
+    {
+        title: "משחק שנוצר ב-Claude",
+        creator: "מרי גרבי",
+        description: "משחק אינטראקטיבי שנוצר באמצעות Claude תוך 4 בקשות בלבד.",
+        link: "https://claude.site/artifacts/94baec74-374b-46d7-8d29-951a6408ca30",
+        tool: "claude",
+    },
+    {
+        title: "חידון בוחן",
+        creator: "נטלי יחיעם",
+        description: "חידון שנוצר 'בשלוש דקות בערך' על בסיס נושאים שהוזנו לכלי.",
+        link: "https://websim.ai/p/1i733wcxx64nve_7f6t_",
+        tool: "websim",
+    },
+    {
+        title: "משחק זיכרון",
+        creator: "נועם ענב",
+        description: "משחק זיכרון קלאסי שנוצר ושוכן באתר של נועם.",
+        link: "https://mathline.neocities.org/memoryGame",
+        tool: "other",
+    },
+    {
+        title: "תרגול בחדר בריחה",
+        creator: "נטלי יחיעם",
+        description: "חדר בריחה נוסף, שהוכן 'בפחות מחמש דקות עבודה' כתרגול לימודי.",
+        link: "https://websim.ai/p/2b_10c7_homfqwg9hpio",
+        tool: "websim",
+    },
+    {
+        title: "משחק על מחזור המים",
+        creator: "חפציה",
+        description: "שדרוג למשחקון קיים על מחזור המים, עם שאלות מרחפות.",
+        link: "https://websim.ai/p/4m_2oo3nx00ml0mmt9tu/2",
+        tool: "websim",
+    },
+    {
+        title: "כרטיסיות מסתובבות",
+        creator: "חפציה",
+        description: "פעילות עם כרטיסיות מסתובבות שנוצרה באמצעות Websim, ללימוד נושא חדש.",
+        link: "https://websim.ai/p/bn1ija1xxc5rjktozydi/10",
+        tool: "websim",
+    },
+    {
+        title: "תוצר שהוכן באמצעות Claude",
+        creator: "חבר/ה אנונימי/ת",
+        description: "'מזל שיש את קלוד שיעשה לי את זה בשתי דקות'.",
+        link: "https://claude.site/artifacts/148901cf-c121-469c-b833-8e6e4acd10e7",
+        tool: "claude",
+    },
+    {
+        title: "מצגת על בינה מלאכותית",
+        creator: "מרי גרבי",
+        description: "מצגת Canva שנוצרה כדוגמה לתוצר מהקהילה.",
+        link: "https://www.canva.com/design/DAGV6Y4_gnU/XBRWs2yVunO6RGD41_ckhA/view",
+        tool: "canva",
+    },
+    {
+        title: "פאזל אינטראקטיבי",
+        creator: "נועם ענב",
+        description: "פאזל שנוצר באמצעות Websim.",
+        link: "https://websim.ai/@noam/puzzle",
+        tool: "websim",
+    },
+    {
+        title: "יצירת תמונות מ-Websim",
+        creator: "עינבל עם י' ארי5לי",
+        description: "דוגמה ליצירת תמונות באמצעות הכלי.",
+        link: "https://websim.ai/c/HgW1k77XdhUvugPKs",
+        tool: "websim",
+    },
+    {
+        title: "תוצאת תיקון ב-Websim",
+        creator: "Rivi Horvatt ריבי הורבט",
+        description: "תוצאה של תיקון בעיה שהייתה בתוצר קודם, בעזרת רענון.",
+        link: "https://websim.ai/c/5ke2GO5qkY4O1vYEN",
+        tool: "websim",
+    },
+    {
+        title: "ניסוי בהמשכים",
+        creator: "חבר/ה אנונימי/ת",
+        description: "התחלה של ניסוי ותיקונים ב-Websim.",
+        link: "https://websim.ai/c/2RbbSAdZrWD7PZZJg",
+        tool: "websim",
+    },
+    {
+        title: "תוצר של הבוקר",
+        creator: "ניר בינה מלאכותית",
+        description: "תוצר שנוצר על ידי ניר.",
+        link: "https://websim.ai/c/jZ1qlrDYQGHuVrhXr",
+        tool: "websim",
+    },
+    {
+        title: "משחק צבעים ב-Claude",
+        creator: "מרי גרבי",
+        description: "משחק התאמת צבעים שנוצר לבקשת הבן.",
+        link: "https://claude.site/artifacts/89118181-fea1-4d2d-878a-35aa708df63f",
+        tool: "claude",
+    },
+    {
+        title: "סידור קוד ותיקון",
+        creator: "נטלי יחיעם",
+        description: "תיקון וסידור קוד לתוצר של מרי, כולל הוספת כפתור לקלט אקראי.",
+        link: "https://websim.ai/p/qzdjvvyem2ymxcushokc",
+        tool: "websim",
+    },
+    {
+        title: "יצירת וידאו ב-Pika",
+        creator: "נועם ענב",
+        description: "התנסות ביצירת וידאו מפרומפט או תמונה ב-Pika.art.",
+        link: "https://pika.art/", 
+        tool: "pika",
+    },
+    {
+        title: "שדרוג משחק ב-Claude",
+        creator: "מרי גרבי",
+        description: "שדרוג למשחק קיים עם כיוונים נוספים.",
+        link: "https://claude.site/artifacts/9436332a-4326-4e3b-951c-c312f44a98f1",
+        tool: "claude",
+    },
+    {
+        title: "סדרת תוצרי Claude",
+        creator: "נועם ענב",
+        description: "שלושה תוצרים שונים שנוצרו עם Claude ברצף.",
+        link: "https://claude.site/artifacts/d06a6af6-55ee-4509-8f8b-01c9590798aa",
+        tool: "claude",
+    },
+    {
+        title: "תוצר משובח מ-Claude",
+        creator: "שרון מרגולין",
+        description: "תוצר שנוצר בשעת לילה מאוחרת עם Claude.",
+        link: "https://claude.site/artifacts/0002de66-82ae-46f8-b04f-e45ca1d9e0b2",
+        tool: "claude",
+    },
+    {
+        title: "מצגת אינטראקטיבית",
+        creator: "נועם ענב",
+        description: "מצגת אינטראקטיבית שנוצרה ב-Websim.",
+        link: "https://websim.ai/@noam/slide",
+        tool: "websim",
+    },
+    {
+        title: "הדגמת Websim",
+        creator: "Hili Zavaro",
+        description: "דוגמה ליכולות של Websim.",
+        link: "https://websim.ai/c/qwDvmMhf3uG3lm5I3",
+        tool: "websim",
+    },
+    {
+        title: "ניסוי Claude",
+        creator: "אנונימי/ת",
+        description: "תוצר שנוצר ב-Claude.",
+        link: "https://claude.site/artifacts/4bf33774-dbb3-4fed-9f55-587fefdaad0a",
+        tool: "claude",
+    },
+]; 

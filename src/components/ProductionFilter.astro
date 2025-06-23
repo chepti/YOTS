@@ -8,6 +8,7 @@
         <button class="filter-btn" data-filter="websim">Websim</button>
         <button class="filter-btn" data-filter="claude">Claude</button>
         <button class="filter-btn" data-filter="canva">Canva</button>
+        <button class="filter-btn" data-filter="pika">Pika</button>
         <button class="filter-btn" data-filter="other">אחר</button>
     </div>
 </div>
@@ -22,7 +23,7 @@
             document.querySelector('.filter-btn.active')?.classList.remove('active');
             button.classList.add('active');
 
-            const filter = button.dataset.filter;
+            const filter = (button as HTMLElement).dataset.filter;
 
             productionItems.forEach(item => {
                 const galleryItem = item as HTMLElement;
