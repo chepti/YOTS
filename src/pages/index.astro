@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "בית | קהילת יוצרים.ות עם AI";
+---
+<BaseLayout title={pageTitle}>
+    <main>
+        <section class="hero">
+            <h2>ברוכים הבאים לקהילה!</h2>
+            <p>מרחב לשיתוף ידע, התנסות בכלים, דיון בסוגיות אתיות ופדגוגיות, והשראה הדדית סביב עולם הבינה המלאכותית.</p>
+        </section>
+
+        <div class="grid-container">
+            <section class="card">
+                <h3>מבזקי חדשות</h3>
+                <ul>
+                    <li>מיקרוסופט מכריזה על כלי AI חדש למפתחים שישולב ב-GitHub Copilot.</li>
+                    <li>גוגל חושפת את Gemini 1.5 Flash, מודל קל ומהיר למשימות ממוקדות.</li>
+                    <li>אוניברסיטת סטנפורד מפרסמת מחקר על ההשפעות ארוכות הטווח של שימוש ב-AI ליצירת תוכן.</li>
+                    <li>האם Perplexity AI הוא באמת "רוצח החיפוש של גוגל"? דיון חדש בקהילה.</li>
+                </ul>
+                <a href="/news-history" class="cta-link">לארכיון החדשות המלא...</a>
+            </section>
+            
+            <section class="card">
+                <h3>תוצר נבחר מהקהילה</h3>
+                <p>הפעם אנו מציגים משחק שנוצר על ידי מרי גרבי באמצעות Claude, תוך 4 בקשות בלבד! יצירה אינטראקטיבית שמדגימה שימוש יצירתי ב-AI.</p>
+                <a href="https://claude.site/artifacts/94baec74-374b-46d7-8d29-951a6408ca30" target="_blank" class="cta-link">צפו במשחק</a>
+                <a href="/productions" class="cta-link secondary-link">לגלריית התוצרים המלאה...</a>
+            </section>
+        </div>
+
+        <section class="quick-links">
+            <h3>קישורים מהירים</h3>
+            <div class="links-wrapper">
+                <a href="/tools" class="quick-link-card">
+                    <img src="https://img.icons8.com/fluency/96/ai.png" alt="כלי AI"/>
+                    <h4>מאגר כלי AI</h4>
+                    <p>כל הכלים שהוזכרו בקבוצה, מחולקים לקטגוריות.</p>
+                </a>
+                <a href="/guides" class="quick-link-card">
+                    <img src="https://img.icons8.com/fluency/96/manual.png" alt="מדריכים"/>
+                    <h4>מדריכים וטיפים</h4>
+                    <p>הדרכות, טיפים ופרומפטים שימושיים מהקהילה.</p>
+                </a>
+                <a href="/discussions" class="quick-link-card">
+                    <img src="https://img.icons8.com/fluency/96/group-task.png" alt="דיונים"/>
+                    <h4>שיח ודיאלוג</h4>
+                    <p>ריכוז הדיונים הערכיים והפילוסופיים שלנו.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+</BaseLayout> 

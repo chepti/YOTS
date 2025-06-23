@@ -14,7 +14,15 @@ out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Environment variables
 .env
-.env.local 
+.env.local
+
+# Astro
+dist/
+.astro/
+
+# Vercel
+.vercel/ 

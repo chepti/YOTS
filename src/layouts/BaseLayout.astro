@@ -1,0 +1,47 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="he" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="קהילת יוצרים עם בינה מלאכותית - מאגר ידע, כלים ודיונים" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} >
+		<title>{title}</title>
+		<link rel="stylesheet" href="/src/styles/style.css">
+	</head>
+	<body>
+		<div class="container">
+            <header>
+                <div class="logo-title">
+                    <img src="/logo.svg" alt="לוגו קהילת יוצרים" class="logo">
+                    <h1>קהילת יוצרים.ות עם AI</h1>
+                </div>
+                <nav>
+                    <a href="/" class:list={{ active: Astro.url.pathname === '/' }}>בית</a>
+                    <a href="/productions" class:list={{ active: Astro.url.pathname === '/productions/' }}>תוצרים</a>
+                    <a href="/tools" class:list={{ active: Astro.url.pathname === '/tools/' }}>כלים</a>
+                    <a href="/guides" class:list={{ active: Astro.url.pathname === '/guides/' }}>מדריכים</a>
+                    <a href="/discussions" class:list={{ active: Astro.url.pathname === '/discussions/' }}>דיונים</a>
+                </nav>
+            </header>
+
+			<slot />
+
+			<footer>
+                <p>&copy; 2024 קהילת יוצרים ויוצרות עם בינה מלאכותית. כל הזכויות שמורות.</p>
+                <p>האתר נבנה ומתוחזק על ידי חברי הקהילה.</p>
+            </footer>
+        </div>
+	</body>
+</html> 

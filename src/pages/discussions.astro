@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "שיח ודיאלוג | קהילת יוצרים.ות עם AI";
+---
+<BaseLayout title={pageTitle}>
+    <main class="content-page">
+        <h2>שיח ודיאלוג: סוגיות מהקהילה</h2>
+        <p>עמוד שמרכז את הדיונים הערכיים והפילוסופיים שהתקיימו בקבוצה. לחצו על נושא כדי לקרוא סיכום של נקודות מרכזיות שעלו בדיון.</p>
+
+        <ul class="discussion-list">
+            <li><a href="/discussion-education">
+                <div class="discussion-item">
+                    <h3>שילוב בינה מלאכותית בחינוך ובהוראה</h3>
+                    <p>הזדמנויות, אתגרים, והתפקיד המשתנה של המורה והתלמיד.</p>
+                </div>
+            </a></li>
+            <li><a href="/discussion-ethics">
+                <div class="discussion-item">
+                    <h3>אתיקה, זכויות יוצרים ושימוש הוגן</h3>
+                    <p>דיון סוער על בעלות, שימוש הוגן, דיפ-פייקס והטיות במודלי AI.</p>
+                </div>
+            </a></li>
+            <li><a href="/discussion-jobs">
+                <div class="discussion-item">
+                    <h3>בינה מלאכותית ושוק העבודה המשתנה</h3>
+                    <p>אילו מקצועות בסכנה? אילו מקצועות חדשים נוצרים? ומהי המיומנות החשובה ביותר לעתיד?</p>
+                </div>
+            </a></li>
+            <li><a href="/discussion-future">
+                <div class="discussion-item">
+                    <h3>עתידנות, חדשנות והשלכות ארוכות טווח</h3>
+                    <p>המירוץ ל-AGI, סוכנים אוטונומיים, והדמוקרטיזציה של היצירה.</p>
+                </div>
+            </a></li>
+            <li><a href="/discussion-daily">
+                <div class="discussion-item">
+                    <h3>טיפים וטריקים לשימוש יומיומי</h3>
+                    <p>איך AI יכול לעזור לנו בבישול, תכנון טיולים, ניהול מיילים ולמידת מיומנויות חדשות.</p>
+                </div>
+            </a></li>
+        </ul>
+    </main>
+</BaseLayout> 
