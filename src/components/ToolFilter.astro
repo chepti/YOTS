@@ -1,0 +1,41 @@
+---
+// Client-side search component
+---
+<div class="search-container">
+    <label for="tool-search">חיפוש כלי:</label>
+    <input type="text" id="tool-search" placeholder="הקלד שם של כלי...">
+</div>
+
+<script>
+    document.getElementById('tool-search')?.addEventListener('keyup', function() {
+        const searchTerm = (this as HTMLInputElement).value.toLowerCase();
+        const toolItems = document.querySelectorAll('.tool-list li');
+
+        toolItems.forEach(item => {
+            const toolLink = item.querySelector('a');
+            if (toolLink) {
+                const toolName = toolLink.textContent?.toLowerCase() || '';
+                const toolDescription = item.querySelector('p')?.textContent?.toLowerCase() || '';
+                const listItem = item as HTMLLIElement;
+
+                if (toolName.includes(searchTerm) || toolDescription.includes(searchTerm)) {
+                    listItem.style.display = 'list-item';
+                } else {
+                    listItem.style.display = 'none';
+                }
+            }
+        });
+
+        // Optional: Hide category title if all items are hidden
+        const categories = document.querySelectorAll('.tool-category');
+        categories.forEach(category => {
+            const visibleItems = category.querySelectorAll('li[style*="list-item"]');
+            const categoryElement = category as HTMLElement;
+            if (visibleItems.length === 0) {
+                categoryElement.style.display = 'none';
+            } else {
+                categoryElement.style.display = 'block';
+            }
+        });
+    });
+</script> 

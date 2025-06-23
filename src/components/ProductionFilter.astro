@@ -1,0 +1,37 @@
+---
+// This component is client-side only, no server code needed.
+---
+<div class="filter-container">
+    <span>סנן לפי כלי:</span>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">הכל</button>
+        <button class="filter-btn" data-filter="websim">Websim</button>
+        <button class="filter-btn" data-filter="claude">Claude</button>
+        <button class="filter-btn" data-filter="canva">Canva</button>
+        <button class="filter-btn" data-filter="other">אחר</button>
+    </div>
+</div>
+
+<script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productionItems = document.querySelectorAll('.production-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Handle active button style
+            document.querySelector('.filter-btn.active')?.classList.remove('active');
+            button.classList.add('active');
+
+            const filter = button.dataset.filter;
+
+            productionItems.forEach(item => {
+                const galleryItem = item as HTMLElement;
+                if (filter === 'all' || galleryItem.dataset.tool === filter) {
+                    galleryItem.style.display = 'flex';
+                } else {
+                    galleryItem.style.display = 'none';
+                }
+            });
+        });
+    });
+</script> 
